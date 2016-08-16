@@ -55,6 +55,7 @@
 (use-package web-mode)
 
 ;; csharp-mode
+(use-package cl)
 (use-package csharp-mode)
 
 ;; markdown
