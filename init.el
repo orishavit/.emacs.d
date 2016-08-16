@@ -25,7 +25,8 @@
 (global-set-key (kbd "M-x") #'helm-M-x)
 
 ;;; projectile
-(use-package projectile)
+(use-package projectile
+  :config (projectile-global-mode t))
 (use-package helm-projectile)
 
 ;;; magit
@@ -64,7 +65,7 @@
          ("\\.markdown\\'" . markdown-mode))
   :init (setq markdown-command "multimarkdown"))
 
-
+(setq inhibit-startup-screen t)
 
 (show-paren-mode t)
 
@@ -80,4 +81,4 @@
       require-final-newline t
       mouse-yank-at-point t)
 
-(projectile-global-mode)
+
