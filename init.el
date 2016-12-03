@@ -46,7 +46,8 @@
 (use-package better-defaults)
 
 ;; company
-(use-package company)
+(use-package company
+  :init (add-hook 'after-init-hook 'global-company-mode))
 
 ;; dired+
 (use-package dired+)
@@ -65,6 +66,9 @@
          ("\\.markdown\\'" . markdown-mode))
   :init (setq markdown-command "multimarkdown"))
 
+;; evil mode
+(use-package evil)
+(evil-mode 1)
 
 (setq inhibit-splash-screen t)
 
@@ -83,3 +87,17 @@
       mouse-yank-at-point t)
 
 (projectile-global-mode)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (evil markdown-mode csharp-mode web-mode dired+ company better-defaults monokai-theme git-timemachine org-bullets magit helm-projectile projectile helm emms nyan-mode use-package))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
