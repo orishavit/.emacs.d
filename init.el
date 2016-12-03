@@ -33,7 +33,8 @@
 
 ;;; org-mode
 (use-package org)
-(use-package org-bullets)
+(use-package org-bullets
+  :init (add-hook 'org-mode-hook 'org-bullets-mode))
 
 ;;; git-timemachine
 (use-package git-timemachine)
@@ -65,6 +66,7 @@
   :init (setq markdown-command "multimarkdown"))
 
 
+(setq inhibit-splash-screen t)
 
 (show-paren-mode t)
 
