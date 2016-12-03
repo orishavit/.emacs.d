@@ -25,7 +25,8 @@
 (global-set-key (kbd "M-x") #'helm-M-x)
 
 ;;; projectile
-(use-package projectile)
+(use-package projectile
+  :config (projectile-global-mode t))
 (use-package helm-projectile)
 
 ;;; magit
@@ -56,6 +57,7 @@
 (use-package web-mode)
 
 ;; csharp-mode
+(use-package cl)
 (use-package csharp-mode)
 
 ;; markdown
@@ -101,3 +103,4 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
